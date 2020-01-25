@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="index.css" type="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <title>CSS FlexBox Practice</title>
+</head>
+
+<body>
+  <!-- NOTES: 
+    https://www.youtube.com/watch?v=JJSoEo8JSnc
+    https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+    - CSS3 Layout 
+    - Easy way to arange items in a container
+    - NO FLOATS
+
+    1) "display: flex" property
+    - Apply to Parent container
+    - Similar to applying "display: inline-block" to children
+    Ex.
+    #container {
+      display: flex;
+    }
+
+    2) Flex Item = child element inside container
+    3) MAIN = X - Axis
+    4) CROSS = Y - Axis
+  -->
+
+  <!--
+    ------------------------------------------------------------------------
+    5) "flex-grow: <num>" property
+      https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow
+      - Apply to Child flex item
+      - Value is unitless number
+      - Default value = 0
+      - Number refers to how much of the remaining space (main size/width) in 
+      parent container should be assigned to the child item
+      - Main size default = width, but depends on flex-direction
+      - Higher the number, the wider % the flex-item relative other siblings
+      EX 5)1. children div flex items will all be equally spaced as window grows/shrinks
+      HTML
+    -->
+
+      <!-- <div class="container">
+        <div class="flex-item1">alsk dfj alwi ejla flkasjdf jfoasjd 3 tehl ]</div>
+        <div class="flex-item2">alsk dfj alwi ejla flkasjdf jfoasjd 3 tehl ]</div>
+        <div class="flex-item3">alsk dfj alwi ejla flkasjdf jfoasjd 3 tehl ]</div>
+      </div> -->
+
+    <!-- CSS
+    .container div {
+      border: 1px solid;
+      padding: 10px;
+    }
+    .flex-item1 {
+      flex-grow: 1;
+    /* flex: 1; SAME */
+    }
+    .flex-item2 {
+      flex-grow: 1;
+    }
+    .flex-item3 {
+      flex-grow: 1;
+    } -->
+    
+    <!-- EX 5)2. flex-item1 will be 50% of window as window grows/shrinks
+    .container div {
+      border: 1px solid;
+      padding: 10px;
+    }
+    .flex-item1 {
+      flex-grow: 2;           // 2/(1 + 1 + 2) = 50%
+      /* flex: 1; SAME */
+    }
+    .flex-item2 {
+      flex-grow: 1;
+    }
+    .flex-item3 {
+      flex-grow: 1;
+    } -->
+
+
+    <!-- 
+    ------------------------------------------------------------------------
+    7) "flex-shrink: <number>" property
+
+    ------------------------------------------------------------------------
+    6) "flex-basis: " property
+      
+    ------------------------------------------------------------------------
+    7) "flex: " property
+    https://developer.mozilla.org/en-US/docs/Web/CSS/flex
+    - Shorthand for "flex-grow: ", "flex-shrink: ", and "flex-basis: "
+    - Can have 1, 2, or 3 values
+      flex: G_  S_  B_       
+            ^  ^  ^
+            |  |  |
+            |  |  flex-Basis value (width)
+            |  |  
+            |  flex-Shrink value (num)
+            |
+            flex-Grow value (num)
+    - Values can be: 1) auto, 2) initial, 3) none, 4) <number>
+    - DEFAULT VALUES:
+      flex: 0 1 auto;
+    - One Value:
+      flex: <num>    ==   flex: <num> 1 0
+      flex: auto
+      flex: none
+      flex: initial
+    - Two Values:
+      flex: <num> (<num> || width)   ==   flex: <num> 1 0
+      1st val must be num
+      2nd val can be num or width (ex. 30px) -->
+  
+
+  <div class="container">
+    <div class="box1">
+      <h3>Box 1</h3>
+      <p>alsk dfj alwi ejla flkasjdf jfojwf;lkjgo[iqucx;k,ng asjd 3;l ]</p>
+    </div>
+    
+    <div class="box2">
+      <h3>Box 2</h3>
+      <p>alsk dfj alwi ejla flkasjdf jfojwf;lkjgo[iqucx;k,ng asjd 3;l ]</p>
+    </div>
+    
+    <div class="box3">
+      <h3>Box 3</h3>
+      <p>alsk dfj alwi ejla flkasjdf jfojwf;lkjgo[iqucx;k,ng asjd 3;l ]</p>
+    </div>
+  </div>
+
+</body>
+
+</html>

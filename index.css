@@ -1,0 +1,48 @@
+
+/* EXAMPLE 5) 1 */
+/* .container {
+  background: grey;
+  display: flex;
+}
+
+.container div {
+  border: 1px solid;
+  padding: 10px;
+}
+
+.flex-item1 {
+  flex-grow: 1;
+}
+
+.flex-item2 {
+  flex-grow: 1;
+}
+
+.flex-item3 {
+  flex-grow: 1;
+} */
+
+
+
+.container {
+  background: grey;
+  padding: 10px;
+  display: flex;
+}
+
+.box1, .box2, .box3 {
+  background: pink;
+  border: 1px solid black;
+}
+
+.box1 {
+  flex-shrink: 2;
+}
+
+.box2 {
+  flex-shrink: 1;
+}
+
+.box3 {
+  flex-shrink: 1;
+}
